@@ -16,13 +16,13 @@ by calculating:
 
 Do not use division in your solution.
 */
-var exampleArray = [1,7,3,4];
+var exampleArray = [1,7,3,4,0];
 var get_products_of_all_ints_except_at_index = function(inputArray){
   var resultsArray = new Array(inputArray.length);
   for (var i = 0; i < inputArray.length; i++) {
     var product = 1;
     for (var j = 0; j < inputArray.length; j++) {
-      if (i!=j){
+      if (i!=j && inputArray[j]!=0){
         product = product * inputArray[j];
       }
     }
